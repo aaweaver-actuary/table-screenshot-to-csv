@@ -23,6 +23,3 @@ classifiers = [
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3.11",
 ]
-
-[project.scripts]
-spam-cli = "spam:main_cli"
