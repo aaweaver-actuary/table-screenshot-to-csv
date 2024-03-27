@@ -5,18 +5,16 @@ WORKDIR /app
 SHELL ["/bin/zsh", "-c"]
 
 RUN apt-get update && apt-get install -y \
-    python3-pip \
-    python3-venv \
-    libgl-dev \
-    libgl-image-display-dev \
-    python3-opencv
-
-RUN rm -rf /var/lib/apt/lists/* \
+        python3-pip \
+        python3-venv \
+        libgl-dev \
+        libgl-image-display-dev \
+        python3-opencv \
+    && rm -rf /var/lib/apt/lists/* \
     && if [ -d /app/.venv ]; then rm -rf /app/.venv; fi \
     && python3 -m venv /app/.venv \
     && source /app/.venv/bin/activate \
     && pip install --upgrade pip \
-    && pip install -r requirements.txt \
     && apt-get remove -y python3-pip \
     && apt-get remove -y python3-venv \
     && apt-get remove -y libgl-dev \
