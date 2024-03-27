@@ -1,0 +1,16 @@
+version: "3"
+services:
+  py:
+    image: aaweaver9/py:latest
+    container_name: py
+    volumes:
+      - ..:/app
+    working_dir: /app
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ../data/mongo:/data/db
