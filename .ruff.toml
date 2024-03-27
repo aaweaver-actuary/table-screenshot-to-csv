@@ -30,9 +30,6 @@ exclude = [
     "docs/*",
     ".ignore",
     ".ignore/*"
-] + [
-    "_modular_run_command.py",
-    "_dynamic_rolling_sum_before_rewrite.py",
 ]
 
 # Same as Black.
