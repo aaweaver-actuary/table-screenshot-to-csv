@@ -1,7 +1,9 @@
 version: "3"
 services:
   py:
-    image: aaweaver9/py:latest
+    build:
+      context: .
+      dockerfile: py.Dockerfile
     container_name: py
     volumes:
       - ..:/app

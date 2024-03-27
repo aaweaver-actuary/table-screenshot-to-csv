@@ -69,5 +69,5 @@
       "evenBetterToml.schema.links": true
     }
   },
-  "postAttachCommand": "install_dotfiles $HOME .zshrc .zsh_aliases && exec zsh && install_dotfiles /app .ruff.toml .prettierrc .mypy.ini pytest.ini pyproject.toml && .venv/bin/python -Xfrozen_modules=off && ln -s .venv/bin/python /app/python3"
+  "postAttachCommand": "install_dotfiles $HOME .zshrc .zsh_aliases && exec zsh && install_dotfiles /app .ruff.toml .prettierrc .mypy.ini pytest.ini && exec zsh"
 }
